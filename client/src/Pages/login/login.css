@@ -1,0 +1,112 @@
+/* Full-width input fields */
+.main-login-conatiner{
+  background-image: url('../../assets//loginbg.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: auto;
+  max-width: 40%;
+
+  background-clip: border-box;
+}
+.form-conatiner{
+  max-width: 80%;
+  margin: auto;
+  /* border: 1px solid gray; */
+ /* box-shadow:  2px 2px gray; */
+  margin-top: 100px;
+  height: 100%!important;
+  /* background-color: gray; */
+background-color: transparent;
+
+  
+}
+.form-conatiner> h1{
+  text-align: center;
+}
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+.button-login {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+ width: 40%;
+ border-radius: 5px;
+}
+.container-btn{
+  display: flex;
+  
+  justify-content: space-around;
+}
+
+.button-login:hover {
+  opacity: 0.8;
+}
+
+
+.containers {
+  padding: 16px;
+}
+.forgent-btn{
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+ width: 40%;
+ border-radius: 5px;
+}
+.link-forget-bar{
+  color: white;
+  text-decoration: none;
+  text-shadow: gray;
+  text-wrap: normal;
+}
+.signup{
+  font-size: 15px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.signup-link{
+ text-decoration: none;
+}
+.signup>a:hover{
+  color: red;
+}
+.active{
+  border-bottom: 1px solid gray;
+
+}
+
+@media screen and (max-width: 780px) {
+  .form-conatiner{
+    box-shadow:  2px 2px gray;
+    max-width: 100%;
+    margin: auto 6px;
+    border: 1px solid gray;
+    border-radius: 6px;
+    margin-top: 40px;
+  }
+  .forgent-btn{
+    float: right;
+    width:fit-content;
+    padding: 8px 10px;
+    margin-top: 5px;
+    background-color: rgba(10, 10, 39, 0.368);
+    outline: none;
+    border: none;
+    border-radius: 4px;
+  }
+ 
+}
