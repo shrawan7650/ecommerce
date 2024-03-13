@@ -8,6 +8,7 @@ const DB = require('./config/Db');
 const morgan = require('morgan');
 const router = require('./routes/authRouts');
 const categoryRoutes = require('./routes/categoryRoutes')
+const productRoutes = require('./routes/productRoutes')
 //middleware
 app.use(express.json());
 app.use(morgan("dev"))  
@@ -16,6 +17,7 @@ app.use(cors())
 //routes
 app.use('/api/v1',router)
 app.use('/api/v1',categoryRoutes);
+app.use('/api/v1',productRoutes);
 
 app.get('/', (req, res) => res.send('Hello World!'))
 

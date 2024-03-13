@@ -1,12 +1,12 @@
-import express from "express";
-import { isAdmin, requireSignIn } from "../middlerwares/authMiddleWere.js";
-import {
-  categoryControlller,
+const express = require("express");
+const { isAdmin, requiredVerified } = require("../middlerwares/authMiddleWere.js");
+const {
+  findcategoryControlller,
   createCategoryController,
-  deleteCategoryCOntroller,
+  deleteCategoryController,
   singleCategoryController,
   updateCategoryController,
-} from "../controllers/CategoryControllers.jsx";
+} = require("../controllers/CategoryControllers");
 
 const router = express.Router();
 
@@ -14,7 +14,7 @@ const router = express.Router();
 // create category
 router.post(
   "/create-category",
-  requireSignIn,
+  requiredVerified,
   isAdmin,
   createCategoryController
 );
@@ -22,23 +22,23 @@ router.post(
 //update category
 router.put(
   "/update-category/:id",
-  requireSignIn,
+  requiredVerified,
   isAdmin,
   updateCategoryController
 );
 
-//getALl category
-router.get("/get-category", categoryControlller);
+//getAll category
+router.get("/get-category", findcategoryControlller);
 
 //single category
-router.get("/single-category/:slug", singleCategoryController);
+router.get("/single-category/:id", singleCategoryController);
 
 //delete category
 router.delete(
   "/delete-category/:id",
-  requireSignIn,
+  requiredVerified,
   isAdmin,
-  deleteCategoryCOntroller
+  deleteCategoryController
 );
 
-export default router;
+module.exports = router;

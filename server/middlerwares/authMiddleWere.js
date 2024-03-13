@@ -1,4 +1,4 @@
-const JWT = require("jsonwebtoken");
+var JWT = require('jsonwebtoken');
 const User = require("../models/userModel");
 
 //user accesss
